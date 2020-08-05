@@ -1,0 +1,65 @@
+---
+
+R1:
+    hostname: 192.168.31.101
+    groups:
+        - linux_group
+
+
+
+R2:
+    hostname: 192.168.31.102
+    groups:
+        - linux_group
+
+R3:
+    hostname: 192.168.31.103
+    groups:
+        - linux_group
+
+
+R4:
+    hostname: 192.168.31.104
+    groups:
+        - linux_group
+
+R5:
+    hostname: 192.168.31.105
+    groups:
+        - linux_group
+
+R6:
+    hostname: 192.168.31.106
+    groups:
+        - linux_group
+
+
+R7:
+    hostname: 192.168.31.107
+    groups:
+        - linux_group
+
+R8:
+    hostname: 192.168.31.108
+    groups:
+        - linux_group
+
+R9:
+    hostname: 192.168.31.109
+    groups:
+        - linux_group
+
+R10:
+    hostname: 192.168.31.110
+    groups:
+        - linux_group
+
+R11:
+    hostname: 192.168.31.111
+    groups:
+        - linux_group
+
+R12:
+    hostname: 192.168.31.112
+    groups:
+        - linux_group
