@@ -1,0 +1,6 @@
+---
+
+linux_group:
+  username: cumulus
+  password: CumulusLinux!
+  platform: 'linux'
