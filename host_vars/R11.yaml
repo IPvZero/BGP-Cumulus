@@ -1,0 +1,14 @@
+---
+bgp:
+  loopback_prefix: "10.10.10.11/32"
+  bgp_as: "65006"
+  bgp_rid: "10.10.10.11"
+  bgp_interfaces:
+    swp3:
+      bgp_type: external
+    swp4:
+      bgp_type: external
+  advertising: "True"
+  bgp_networks:
+    - 192.168.11.0/24
+    - 192.168.111.0/24
