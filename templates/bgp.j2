@@ -1,0 +1,16 @@
+net add loopback lo ip address {{ host.facts.bgp.loopback_prefix }}
+net add bgp autonomous-system {{ host.facts.bgp.bgp_as }}
+net add bgp router-id {{ host.facts.bgp.bgp_rid }}
+{% set interfaces = host.facts.bgp.bgp_interfaces %}
+{% for interface in interfaces %}
+net add bgp neighbor {{ interface }} remote-as {{ interfaces[interface]['bgp_type'] }}
+net add interface {{ interface }} ipv6 nd ra-interval 10
+net del interface {{ interface }} ipv6 nd suppress-ra
+net add bgp neighbor {{ interface }} capability extended-nexthop
+{% endfor %}
+{% if host.facts.bgp.advertising == "True" %}
+{% for nwrk in host.facts.bgp.bgp_networks %}
+net add bgp network {{ nwrk }}
+{% endfor %}
+{% endif %}
+net commit
